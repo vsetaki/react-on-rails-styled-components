@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Button, Editor } from '@lt/components';
+import { Button, Editor, Badge } from '@lt/components';
 import UIGlobalStyles from '@lt/components/styles';
 import styled from 'styled-components';
 
 import GlobalStyles from './styles';
+import ComponentWithSCSS from './ComponentWithSCSS';
 
 export default class TestComponent extends React.Component {
   render() {
@@ -21,6 +22,11 @@ export default class TestComponent extends React.Component {
           />
         </StyledEditor>
         <Button primary onClick={() => alert('Submitted')}>Submit</Button>
+        <StyledHr />
+        <h2>Component from @lt/components</h2>
+        <Badge primary>test</Badge>
+        <h2>Component with SCSS</h2>
+        <ComponentWithSCSS />
       </StyledContainer>
     );
   }
@@ -33,4 +39,9 @@ const StyledContainer = styled.div`
 
 const StyledEditor = styled.div`
   margin-bottom: 15px;
+`;
+
+const StyledHr = styled.hr`
+  margin-bottom: 15px;
+  margin-top: 15px;
 `;
