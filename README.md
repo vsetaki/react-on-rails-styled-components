@@ -7,3 +7,9 @@ This example is created to test Ruby on Rails with server side rendered React co
 ```
 rails s
 ```
+
+Go to 
+
+```
+http://localhost:3000/hello_world
+```
